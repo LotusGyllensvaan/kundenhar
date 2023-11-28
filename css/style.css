@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+}
+
+#wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 55% 2.5% 42.5%;
+    grid-template-rows:13% 8% 79%;
+    grid-template-areas: 
+    "hd hd hd"
+    "nv nv nv"
+    "sc dv as"
+    ;
+}
+
+header{
+    grid-area: hd;
+    background-color: #e67e22;
+}
+
+nav{
+    grid-area: nv;
+    background-color: #292F36;
+}
+
+section{
+    grid-area: sc;
+    background-color: #fff;
+    background-image: url(/img/kalkon.jpg);
+    background-size: contain;
+}
+
+div{
+    grid-area: dv;
+    background-color: yellow;
+}
+
+aside{
+    grid-area: as;
+    background-color: #4ECDC4;
+}
+
+.imageDivider{
+    transform: scale(-1, -1);
+}
