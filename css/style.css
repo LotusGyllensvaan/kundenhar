@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    font-family: "SE Inter","Space Grotesk",Helvetica,sans-serif;
 }
 
 #wrapper{
@@ -18,10 +19,34 @@ header{
     grid-area: hd;
     background-color: #e67e22;
 }
+header h1{
+    text-align: center;
+    font-size: 2rem;
+    color: #fbf9ee;
+}
 
 nav{
+    display: flex;
     grid-area: nv;
-    background-color: #292F36;
+    background-color: #1B4D7A;
+}
+nav h2{
+    font-size: 24px;
+    margin: 0;
+    padding-top:7px;
+    padding-left: 20px;
+    color: #fbf9ee;
+}
+.secondNavText{
+    padding-left: 10px;
+    color: #e67e22;
+}
+.thirdNavText{
+    font-size: 16px;
+    margin: 0;
+    padding-left: 10;
+    padding-top: 13px;
+    font-weight: 1;
 }
 
 section{
@@ -42,5 +67,6 @@ aside{
 }
 
 .imageDivider{
-    transform: scale(-1, -1);
+    writing-mode: vertical-lr;
+    text-align: left;
 }
