@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     font-family: "SE Inter","Space Grotesk",Helvetica,sans-serif;
+
 }
 
 #wrapper{
@@ -52,8 +53,12 @@ nav h2{
 section{
     grid-area: sc;
     background-color: #fff;
-    background-image: url(/img/kalkon.jpg);
-    background-size: contain;
+}
+
+.mainImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 div{
@@ -63,10 +68,30 @@ div{
 
 aside{
     grid-area: as;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #4ECDC4;
 }
 
-.imageDivider{
+.articleTitle{
+    margin-left: 10px;
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+.articleDescription{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.imageDividerText{
+    font-size: 1rem;
+    padding-top: 5px;
+    padding-left: 0.4rem;
+    word-spacing: 5px;
     writing-mode: vertical-lr;
     text-align: left;
+    margin: 0px;
+   
 }
