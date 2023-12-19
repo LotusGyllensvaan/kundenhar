@@ -1,12 +1,12 @@
 body{
     margin: 0px;
     font-family: "SE Inter","Space Grotesk",Helvetica,sans-serif;
-
 }
 
-#wrapper{
+#wrapperLandingPage{
     display: grid;
-    height: 100vh;
+    border-bottom: 1px solid #333;
+    height: calc(100vh - 4px);
     grid-template-columns: 55% 2.5% 42.5%;
     grid-template-rows:13% 8% 79%;
     grid-template-areas: 
@@ -27,9 +27,11 @@ header h1{
 }
 
 nav{
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
     display: flex;
     grid-area: nv;
-    background-color: #1B4D7A;
+    background-color: #E69C22;
 }
 nav h2{
     font-size: 24px;
@@ -40,7 +42,7 @@ nav h2{
 }
 .secondNavText{
     padding-left: 10px;
-    color: #e67e22;
+    color: #468391;
 }
 .thirdNavText{
     font-size: 16px;
@@ -61,9 +63,11 @@ section{
     object-fit: cover;
 }
 
-div{
+#imageDivider{
     grid-area: dv;
-    background-color: yellow;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    background-color: #22C3E6;
 }
 
 aside{
@@ -71,7 +75,7 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #4ECDC4;
+    background-color: white;
 }
 
 .articleTitle{
@@ -86,12 +90,33 @@ aside{
 }
 
 .imageDividerText{
+    text-justify: distribute;
     font-size: 1rem;
-    padding-top: 5px;
+    padding-top: 1rem;
     padding-left: 0.4rem;
-    word-spacing: 5px;
+    word-spacing: 0.7rem;
     writing-mode: vertical-lr;
-    text-align: left;
     margin: 0px;
    
+}
+/* ----------------------------------------------------------- */
+
+#wrapperCards{
+    height: 100vh;
+    background-color: white;
+}
+
+#cardContainer{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: auto;
+    width: auto;
+}
+
+.cardImg{
+    object-fit: fill;
 }
