@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     font-family: "SE Inter","Space Grotesk",Helvetica,sans-serif;
+    /* -webkit-font-smoothing: antialiased; */
 }
 
 #wrapperLandingPage{
@@ -25,9 +26,10 @@ header h1{
     font-size: 2rem;
     color: #fbf9ee;
 }
-
+header a{
+    text-decoration:none
+}
 nav{
-    border-top: 1px solid #333;
     border-bottom: 1px solid #333;
     display: flex;
     grid-area: nv;
@@ -40,14 +42,17 @@ nav h2{
     padding-left: 20px;
     color: #fbf9ee;
 }
+nav a:hover{
+    color: #22C3E6;
+}
 .secondNavText{
     padding-left: 10px;
     color: #468391;
 }
 .thirdNavText{
     font-size: 16px;
-    margin: 0;
-    padding-left: 10;
+    margin: 0px;
+    padding-left: 10px;
     padding-top: 13px;
     font-weight: 1;
 }
@@ -78,7 +83,7 @@ aside{
     background-color: white;
 }
 
-.articleTitle{
+#articleTitle{
     margin-left: 10px;
     margin-left: 10px;
     font-size: 2rem;
@@ -90,7 +95,6 @@ aside{
 }
 
 .imageDividerText{
-    text-justify: distribute;
     font-size: 1rem;
     padding-top: 1rem;
     padding-left: 0.4rem;
@@ -101,22 +105,97 @@ aside{
 }
 /* ----------------------------------------------------------- */
 
+* {
+    box-sizing: border-box;
+}
+
+h5{
+    margin-left: 1.25rem;
+    margin-bottom: 0px;
+    font-size: 2.5rem;
+}
+
+#latestRecipesBar{
+    margin-left: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    height: 7px;
+    width: auto;
+    box-sizing: border-box;
+    border: 1.25px solid #333;
+    border-radius: 70px;
+    background: linear-gradient(90deg,#e67e22 7.15%,#fff 91.53%);
+}
+
 #wrapperCards{
+    margin-top: 20px;
     height: 100vh;
     background-color: white;
 }
 
 #cardContainer{
     display: flex;
-    gap: 1rem;
+    gap: 1.6rem;
+    margin-left: 1.25rem;
     flex-wrap: wrap;
 }
 
 .card{
-    height: auto;
-    width: auto;
+    height: 25%;
+    width: 25%;
 }
 
 .cardImg{
+    height: 100%;
+    width: 100%;
     object-fit: fill;
+}
+
+.cardText{
+    font-family: "SE Inter","Space Grotesk",Helvetica,sans-serif;
+    font-size: .75rem;
+    line-height: 1.17;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.cardTitle:hover{
+    color: #22C3E6;
+}
+
+/* ----------------------------------------------------------- */
+
+#wrapperRecipe {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 55% 2.5% 42.5%;
+    grid-template-rows:13% 8% 69% 11%;
+    grid-template-areas: 
+    "hd hd hd"
+    "nv nv nv"
+    "ar2 ar2 ad2"
+    "ft ft ft"
+    ;
+}
+
+#article2{
+    margin-left: 1.25rem;
+    grid-area: ar2;
+}
+#aside2{
+    grid-area: ad2;
+}
+#aside2 img{
+    box-shadow: 10px 5px 5px #333;
+    border: 5px solid #333;
+    margin-top: 8.5rem;
+    height: 90%;
+    width: 90%;
+    object-fit: fill;
+}
+
+#footer2{
+    grid-area: ft2;
+    background-color: #22C3E6;
 }
